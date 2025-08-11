@@ -1,0 +1,56 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database
+  postgres:
+    image: postgres:15-alpine
+    container_name: amnex-food-db
+    environment:
+      POSTGRES_DB: food_coupan_management_db
+      POSTGRES_USER: app_user_fcms
+      POSTGRES_PASSWORD: 'fcmsfcms'
+    ports:
+      - "2433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init-db:/docker-entrypoint-initdb.d
+    networks:
+      - amnex-network
+
+  # Next.js Application
+  app:
+    build: .
+    container_name: amnex-food-app
+    environment:
+      - NODE_ENV=production
+      - DB_HOST=10.195.82.121
+      - DB_PORT=2433
+      - DB_DATABASE=food_coupan_management_db
+      - DB_SCHEMA=fcms_scm
+      - DB_USER=app_user_fcms
+      - DB_PASSWORD=fcmsfcms
+      - SMTP_HOST=smtp.gmail.com
+      - SMTP_PORT=587
+      - SMTP_USER=i_aditiya@amnex.com
+      - SMTP_PASS=kfno ptbd kmnf xusx
+      - FROM_EMAIL=i_aditiya@amnex.com
+      - FROM_NAME=AMNEX Food Services
+      - UPLOAD_DIR=/app/uploads/menus
+      - MAX_FILE_SIZE=10485760
+      - BASE_URL=https://fms.amnex.co.in/
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./uploads:/app/uploads
+      - ./data:/app/data
+    depends_on:
+      - postgres
+    networks:
+      - amnex-network
+
+volumes:
+  postgres_data:
+
+networks:
+  amnex-network:
+    driver: bridge

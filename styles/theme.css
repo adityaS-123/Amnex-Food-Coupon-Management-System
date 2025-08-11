@@ -1,0 +1,25 @@
+:root {
+  /* Navy-based color palette */
+  --color-tomato: #3457D5;       /* Primary - bright blue instead of tomato */
+  --color-leaf: #4369E1;         /* Secondary - medium blue instead of green */
+  --color-butter: #7A97F5;       /* Accent - light blue instead of yellow */
+  --color-cream: #F0F4FF;        /* Background - very light blue instead of cream */
+  --color-chocolate: #020F50;    /* Dark accent - deep navy blue as requested */
+  --color-text: #1A1A2E;         /* Main text color - dark navy */
+  --color-light-text: #3F3D56;   /* Secondary text - medium dark blue-gray */
+  --color-border: #D6E0FF;       /* Light borders - light blue */
+  
+  /* Font settings */
+  --font-family-main: 'Poppins', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, sans-serif;
+  --font-family-headers: 'Montserrat', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, sans-serif;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(2, 15, 80, 0.05);
+  --shadow-md: 0 4px 12px rgba(2, 15, 80, 0.08);
+  --shadow-lg: 0 8px 24px rgba(2, 15, 80, 0.12);
+  
+  /* Borders */
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+}

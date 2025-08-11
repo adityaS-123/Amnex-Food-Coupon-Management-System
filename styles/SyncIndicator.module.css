@@ -1,0 +1,40 @@
+.syncIndicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: rgba(2, 15, 80, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+  font-size: 0.9rem;
+  color: #020F50;
+}
+
+.statusDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+.online {
+  background: #4369E1;
+}
+
+.offline {
+  background: #dc3545;
+}
+
+.statusText {
+  font-weight: 500;
+}
+
+.lastSync {
+  opacity: 0.7;
+  font-size: 0.8rem;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}

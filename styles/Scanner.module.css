@@ -1,0 +1,342 @@
+.container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #EEF2FF 0%, #C5CAE9 100%);
+  color: #1A1A2E;
+}
+
+.header {
+  background: #020F50;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(2, 15, 80, 0.2);
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.officerName {
+  color: white;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.logoutButton {
+  background: #3D5AFE;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+}
+
+.logoutButton:hover {
+  background: #304FFE;
+  transform: translateY(-2px);
+}
+
+.backButton {
+  background: #3D5AFE;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.backButton:hover {
+  background: #304FFE;
+  transform: translateY(-2px);
+}
+
+.main {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 100px);
+}
+
+.scannerContainer {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(2, 15, 80, 0.1);
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  border: 1px solid rgba(2, 15, 80, 0.05);
+}
+
+.startScreen .instructions {
+  margin-bottom: 2rem;
+}
+
+.startScreen h2 {
+  color: #020F50;
+  margin-bottom: 1rem;
+}
+
+.startButton {
+  background: linear-gradient(135deg, #3D5AFE 0%, #536DFE 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(61, 90, 254, 0.3);
+}
+
+.startButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(61, 90, 254, 0.4);
+}
+
+.manualButton {
+  background: #EEF2FF;
+  color: #020F50;
+  border: 2px solid #020F50;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.manualButton:hover {
+  background: #020F50;
+  color: white;
+}
+
+.cameraContainer {
+  position: relative;
+}
+
+.video {
+  width: 100%;
+  max-width: 400px;
+  height: 300px;
+  border-radius: 12px;
+  background: #000;
+}
+
+.scanOverlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  pointer-events: none;
+}
+
+.scanFrame {
+  width: 200px;
+  height: 200px;
+  border: 3px solid #020F50;
+  border-radius: 12px;
+  margin: 0 auto 1rem;
+  position: relative;
+  background: rgba(2, 15, 80, 0.1);
+}
+
+.scanFrame::before,
+.scanFrame::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #020F50;
+}
+
+.scanFrame::before {
+  top: -3px;
+  left: -3px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.scanFrame::after {
+  bottom: -3px;
+  right: -3px;
+  border-left: none;
+  border-top: none;
+}
+
+.scanControls {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.stopButton {
+  background: linear-gradient(135deg, #3D5AFE 0%, #536DFE 100%);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.stopButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(61, 90, 254, 0.3);
+}
+
+.successScreen {
+  text-align: center;
+}
+
+.successIcon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.successScreen h2 {
+  color: #020F50;
+  margin-bottom: 1.5rem;
+}
+
+.attendanceDetails {
+  background: #EEF2FF;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin: 1.5rem 0;
+  text-align: left;
+  border: 1px solid rgba(2, 15, 80, 0.1);
+}
+
+.attendanceDetails p {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.resetButton {
+  background: linear-gradient(135deg, #020F50 0%, #3D5AFE 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.resetButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(2, 15, 80, 0.3);
+}
+
+.message {
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.message.success {
+  background: rgba(61, 90, 254, 0.1);
+  color: #020F50;
+  border: 1px solid #3D5AFE;
+}
+
+.message.error {
+  background: rgba(61, 90, 254, 0.05);
+  color: #020F50;
+  border: 1px solid rgba(2, 15, 80, 0.2);
+}
+
+.error {
+  color: #3D5AFE;
+  font-weight: 500;
+}
+
+.exampleCode {
+  background: #EEF2FF;
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  text-align: left;
+  border-left: 4px solid #3D5AFE;
+}
+
+.exampleCode p {
+  margin: 0.5rem 0;
+  font-family: 'Courier New', monospace;
+}
+
+.exampleCode strong {
+  color: #020F50;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .header {
+    padding: 1rem;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .main {
+    padding: 1rem;
+  }
+  
+  .scannerContainer {
+    padding: 1.5rem;
+  }
+  
+  .scanControls {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .video {
+    height: 250px;
+  }
+}
+
+.loadingScreen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 4px solid rgba(2, 15, 80, 0.1);
+  border-top: 4px solid #020F50;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

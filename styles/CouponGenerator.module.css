@@ -1,0 +1,603 @@
+.confirmationContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.5rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.couponPreview {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.coupon {
+  background: white;
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px dashed var(--color-tomato);
+  position: relative;
+}
+
+/* Add food-themed background pattern */
+.coupon::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/images/food-icons-pattern.png');
+  background-size: 200px;
+  opacity: 0.06;
+  z-index: 0;
+}
+
+.couponHeader {
+  background: var(--color-tomato);
+  color: white;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.couponLogoContainer {
+  position: relative;
+  width: 60px;
+  height: 60px;
+}
+
+.couponLogo {
+  object-fit: contain !important;
+}
+
+.couponHeader h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.couponBody {
+  padding: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.couponBody p {
+  margin: 0.7rem 0;
+  font-size: 1.1rem;
+}
+
+.couponFooter {
+  border-top: 1px dashed var(--color-border);
+  padding-top: 1rem;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: var(--color-light-text);
+}
+
+.confirmationButtons {
+  background: white;
+  padding: 1.5rem;
+  border-radius: var(--border-radius-lg);
+  width: 100%;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+}
+
+.confirmationButtons h3 {
+  color: var(--color-chocolate);
+  margin-top: 0;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.confirmButton {
+  background: var(--color-leaf);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: var(--border-radius-md);
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.confirmButton:hover {
+  background: #3fa854;
+}
+
+.denyButton {
+  background: #f8f8f8;
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  padding: 0.8rem 1.5rem;
+  border-radius: var(--border-radius-md);
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.denyButton:hover {
+  background: #f0f0f0;
+}
+
+.generatedContainer {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.generatedContainer h2 {
+  color: var(--color-chocolate);
+  margin-top: 0;
+}
+
+.existingCouponMessage {
+  background: rgba(255, 107, 53, 0.1);
+  padding: 1rem 1.5rem;
+  border-radius: var(--border-radius-md);
+  margin-bottom: 1.5rem;
+  border-left: 4px solid var(--color-tomato);
+}
+
+.couponDisplay {
+  width: 100%;
+  max-width: 500px;
+  margin: 1.5rem auto;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.downloadButton {
+  background: var(--color-chocolate);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: var(--border-radius-md);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.downloadButton:hover {
+  background: #4c3328;
+}
+
+.shareButton {
+  background: var(--color-tomato);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: var(--border-radius-md);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.shareButton:hover {
+  background: #e55a2b;
+}
+
+.errorMessage {
+  color: #e74c3c;
+  background-color: #fdecea;
+  padding: 8px 12px;
+  border-radius: var(--border-radius-md);
+  margin: 10px 0;
+  border-left: 3px solid #e74c3c;
+}
+
+.couponService {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.serviceCard {
+  background: var(--bg-primary);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
+  border: 1px solid var(--border-color);
+  max-width: 500px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.cardHeader {
+  padding: 2rem 2rem 1rem;
+  text-align: center;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  color: white;
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.cardSubtitle {
+  font-size: 0.95rem;
+  opacity: 0.9;
+  font-weight: 400;
+}
+
+.cardContent {
+  padding: 2rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.input {
+  padding: 1rem;
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  background: var(--bg-secondary);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  background: var(--bg-primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.submitButton {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 48px;
+}
+
+.submitButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.submitButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.buttonIcon {
+  font-size: 1.2rem;
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.message {
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  text-align: center;
+}
+
+.messageSuccess {
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--accent-color);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.messageError {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.couponResult {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.couponCard {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.couponHeader {
+  background: linear-gradient(135deg, var(--text-primary) 0%, #374151 100%);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.couponBrand {
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.couponType {
+  font-size: 0.75rem;
+  opacity: 0.9;
+  letter-spacing: 1px;
+  margin-top: 0.25rem;
+}
+
+.couponBody {
+  padding: 2rem;
+  text-align: center;
+}
+
+.couponCode {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  background: var(--bg-accent);
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  border: 2px dashed var(--primary-color);
+  margin-bottom: 1.5rem;
+  letter-spacing: 2px;
+  font-family: 'Courier New', monospace;
+}
+
+.qrSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.qrCode {
+  background: white;
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-light);
+}
+
+.qrCanvas {
+  border-radius: var(--radius-sm);
+}
+
+.qrText {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.couponFooter {
+  background: var(--bg-accent);
+  padding: 1.5rem;
+  border-top: 1px solid var(--border-light);
+}
+
+.couponDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.detailRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.detailLabel {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.detailValue {
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.actionButtons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.actionButton, .actionButtonSecondary {
+  padding: 0.875rem 1.5rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  border: none;
+  font-size: 0.875rem;
+}
+
+.actionButton {
+  background: var(--accent-color);
+  color: white;
+}
+
+.actionButton:hover {
+  background: #059669;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.actionButtonSecondary {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  grid-column: span 2;
+}
+
+.actionButtonSecondary:hover {
+  background: var(--bg-accent);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+.actionIcon {
+  font-size: 1rem;
+}
+
+/* Add to your existing CSS file */
+
+.employeeList {
+  max-height: 400px;
+  overflow-y: auto;
+  margin-top: 15px;
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+}
+
+.employeeItem {
+  padding: 12px 15px;
+  border-bottom: 1px solid #eaeaea;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.employeeItem:last-child {
+  border-bottom: none;
+}
+
+.employeeItem:hover {
+  background-color: #f5f5f5;
+}
+
+.employeeName {
+  font-weight: 500;
+}
+
+.employeeDept {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.searchContainer {
+  margin-bottom: 15px;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.message {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+@media (max-width: 640px) {
+  .serviceCard {
+    margin: 0 1rem;
+  }
+
+  .cardHeader, .cardContent {
+    padding: 1.5rem;
+  }
+
+  .couponBody {
+    padding: 1.5rem;
+  }
+
+  .couponCode {
+    font-size: 1.5rem;
+  }
+
+  .actionButtons {
+    grid-template-columns: 1fr;
+  }
+
+  .actionButtonSecondary {
+    grid-column: span 1;
+  }
+}
