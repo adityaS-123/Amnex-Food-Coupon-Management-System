@@ -2,7 +2,6 @@
 
 A comprehensive system for managing food coupons for employees at Amnex. This application streamlines the process of generating, tracking, and validating food coupons for company meal services.
 
-![Amnex Food Coupon System](https://placeholder-for-screenshot.png)
 
 ## Features
 
